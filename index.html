@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mouvement Écologique — Accueil</title>
+<link rel="preload" href="assets/fonts/albert-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/dm-mono-500-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>
+  // Hide hero text until hero-f.js has split it into lines (never hidden for reduced motion; safety timeout if the script fails)
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('split-pending', 'motion');
+    setTimeout(() => document.documentElement.classList.remove('split-pending'), 3000);
+  }
+</script>
+<link rel="stylesheet" href="styles.css?v=1789734520">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__bar">
+    <a href="#" class="header__logo"><img src="assets/logo-meco.jpg" alt="Mouvement Écologique" width="86" height="56"></a>
+
+    <nav class="nav" aria-label="Navigation principale">
+      <div class="dd" data-dd>
+        <button class="nav__btn" aria-expanded="false" aria-controls="dd-apropos">
+          À propos <img src="assets/chevron-down.svg" alt="" class="nav__chev">
+        </button>
+        <div class="dd__panel" id="dd-apropos">
+          <div class="dd__box">
+            <div class="dd__aside">
+              <p class="dd__lead">Une association indépendante qui agit depuis 1968 pour la nature et la qualité de vie au Luxembourg.</p>
+              <a href="#" class="btn btn--primary btn--sm arrow-host">Qui sommes-nous <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+            <div class="dd__cols dd__cols--2">
+            <div>
+              <p class="dd__heading">Organisation</p>
+              <ul>
+                <li><a href="#">Notre engagement</a></li>
+                <li><a href="#">Nos succès</a></li>
+                <li><a href="#">Positions principales</a></li>
+                <li><a href="#">Rapports d'activités</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="dd__heading">Gouvernance</p>
+              <ul>
+                <li><a href="#">Comité exécutif &amp; Comité</a></li>
+                <li><a href="#">Statuts &amp; Congrès</a></li>
+                <li><a href="#">Groupes de travail</a></li>
+                <li><a href="#">Equipe</a></li>
+              </ul>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dd" data-dd>
+        <button class="nav__btn" aria-expanded="false" aria-controls="dd-regions">
+          Régions <img src="assets/chevron-down.svg" alt="" class="nav__chev">
+        </button>
+        <div class="dd__panel" id="dd-regions">
+          <div class="dd__box">
+            <div class="dd__aside">
+              <p class="dd__lead">Onze régionales portent l'action du Mouvement au plus près des communes.</p>
+              <a href="#" class="btn btn--primary btn--sm arrow-host">Toutes les régionales <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+            <div class="dd__cols dd__cols--2">
+            <div>
+              <ul>
+                <li><a href="#">Miersch an Emgéigend</a></li>
+                <li><a href="#">Echternach-Mullerthal</a></li>
+                <li><a href="#">Luxembourg-Ville</a></li>
+                <li><a href="#">Sud</a></li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="#">Nordstad</a></li>
+                <li><a href="#">Syrdall</a></li>
+                <li><a href="#">Uelzechtdall</a></li>
+              </ul>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dd" data-dd>
+        <button class="nav__btn" aria-expanded="false" aria-controls="dd-sujets">
+          Sujets <img src="assets/chevron-down.svg" alt="" class="nav__chev">
+        </button>
+        <div class="dd__panel" id="dd-sujets">
+          <div class="dd__box">
+            <div class="dd__aside">
+              <p class="dd__lead">Nos prises de position et nos dossiers, de l'énergie à la mobilité.</p>
+              <a href="#" class="btn btn--primary btn--sm arrow-host">Tous les sujets <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+            <div class="dd__cols dd__cols--4">
+            <div>
+              <p class="dd__heading">Environnement</p>
+              <ul>
+                <li><a href="#">Energie &amp; Climat</a></li>
+                <li><a href="#">Protection de la nature</a></li>
+                <li><a href="#">Agriculture &amp; Sylviculture</a></li>
+                <li><a href="#">Culture et Nature</a></li>
+                <li><a href="#">Politique environnementale</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="dd__heading">Société</p>
+              <ul>
+                <li><a href="#">Construction &amp; Logement</a></li>
+                <li><a href="#">Santé &amp; Alimentation</a></li>
+                <li><a href="#">Démocratie &amp; Citoyenneté</a></li>
+                <li><a href="#">Développement durable</a></li>
+                <li><a href="#">Education au développement durable</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="dd__heading">Territoire &amp; Économie</p>
+              <ul>
+                <li><a href="#">Politique communale</a></li>
+                <li><a href="#">Aménagement du territoire</a></li>
+                <li><a href="#">Mobilité</a></li>
+                <li><a href="#">Economie</a></li>
+                <li><a href="#">Aspects internationaux</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="dd__heading">Autres</p>
+              <ul>
+                <li><a href="#">Activités / Événements</a></li>
+                <li><a href="#">Conférences</a></li>
+                <li><a href="#">Podcasts</a></li>
+              </ul>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="nav__link">Publications &amp; médias</a>
+      <a href="#" class="nav__link">move.</a>
+    </nav>
+
+    <div class="header__actions">
+      <a href="#agenda" class="btn btn--ghost btn--sm">Agenda</a>
+      <a href="#" class="btn btn--primary btn--sm">Devenir membre</a>
+    </div>
+
+    <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="#">À propos</a>
+    <a href="#">Régions</a>
+    <a href="#">Sujets</a>
+    <a href="#">Publications &amp; médias</a>
+    <a href="#">move.</a>
+    <a href="#agenda">Agenda</a>
+    <a href="#" class="btn btn--primary">Devenir membre</a>
+  </div>
+</header>
+
+<section class="hero-f">
+  <div class="hero-f__tree-wrap" data-parallax><svg class="hero-f__tree" viewBox="-13 -44 953 692" aria-hidden="true" focusable="false"><path class="leaf leaf--l" style="--t:0" d="M387.303 635.769C399.907 627.78 413.18 618.628 415.968 605.003C426.22 554.888 443.152 430.196 362.675 435.193C286.09 439.928 211.334 440.596 134.372 432.433C79.0746 419.301 39.4026 386.036 7.19441 335.776C-12.5255 438.882 9.19834 543.034 61.2716 637.425C61.2716 637.425 65.9184 644.368 67.719 648L368.658 647.68C374.495 643.235 380.739 639.226 387.332 635.798L387.303 635.769Z"/><path class="leaf leaf--r" style="--t:0" d="M921.482 332.522C891.568 385.455 846.32 422.642 785.94 433.653C711.04 440.277 638.811 439.58 564.637 435.28C534.345 433.537 508.439 458.783 505.361 489.404C502.137 521.391 498.013 623.015 539.892 637.163H538.092C543.9 640.185 549.418 643.642 554.646 647.506L861.015 647.187C863.368 643.032 868.218 635.217 868.015 635.217C918.345 543.761 939.953 440.945 921.453 332.551L921.482 332.522Z"/><path class="leaf leaf--l" style="--t:1" d="M354.572 378.919C290.388 381.62 234.104 382.666 174.276 378.628C139.483 376.275 108.291 362.155 81.4561 341.354C40.9999 310.007 26.3334 259.863 46.8955 211.694C63.0432 173.926 86.9452 139.964 115.233 108.791C128.563 166.634 160.278 207.191 211.973 227.005C255.566 243.71 299.74 258.091 344.262 272.036C399.849 289.438 429.589 338.856 418.756 398.035C400.227 386.298 379.432 377.902 354.543 378.919H354.572Z"/><path class="leaf leaf--r" style="--t:1" d="M582.498 379.006C554.82 377.582 532.98 383.102 509.252 397.483C498.855 342.487 526.475 291.588 581.917 272.791L713.363 228.254C767.789 209.806 799.881 166.082 813.386 108.733C843.067 142.899 866.621 176.396 882.187 214.57C901.791 262.594 885.237 312.157 845.042 342.603C819.078 362.272 789.367 375.926 756.085 378.309C698.726 382.434 643.952 382.202 582.469 379.006H582.498Z"/><path class="leaf leaf--l" style="--t:2" d="M416.752 241.211C336.101 196.064 253.417 196.79 192.399 143.073C174.654 118.524 152.843 81.8889 175.031 53.0401C192.311 30.5828 227.801 17.1025 255.363 3.12843C310.514 116.897 434.468 90.6627 416.752 241.211Z"/><path class="leaf leaf--r" style="--t:2" d="M746.588 128.808C699.742 193.595 588.364 196.384 510.995 240.95C494.47 91.2728 617.174 116.49 672.704 3.47706C699.713 15.9405 732.822 30.4375 752.803 52.3138C773.017 74.3935 757.13 106.293 746.588 128.837V128.808Z"/><path class="leaf leaf--l" style="--t:3" d="M422.88 81.5403L355.589 32.0644C336.653 18.1194 321.231 1.00762 317.31 -22.4375C354.253 -37.3413 383.556 -43.6747 421.805 -39.6945C423.984 3.65137 424.187 42.6104 422.88 81.5403Z"/><path class="leaf leaf--r" style="--t:3" d="M611.889 -21.5369C600.156 29.3626 545.323 43.5981 505.535 82.2957C503.88 39.9957 504.112 1.55961 507.161 -40.4789C546.485 -42.8902 576.834 -36.9926 611.889 -21.5369Z"/></svg></div>
+  <div class="container hero-f__inner">
+    <h1 class="hero-f__title" data-rotator>3.000 citoyens<br>engagés pour<br>un Luxembourg<br>plus <span class="sr-only">durable</span><span class="hero-f__rotator" aria-hidden="true"><span class="hero-f__word is-active" style="--c:var(--meco)">durable</span><span class="hero-f__word" style="--c:#a6d97a">vert</span><span class="hero-f__word" style="--c:#e0936a">vivant</span><span class="hero-f__word" style="--c:var(--meco)">juste</span><span class="hero-f__word" style="--c:#a6d97a">solidaire</span><span class="hero-f__word" style="--c:#e0936a">sain</span></span></h1>
+    <div class="hero-f__bottom">
+      <p class="hero-f__lead">Le Mouvement Écologique défend la nature, le climat et une société plus juste — par l'action de terrain, le plaidoyer politique et la mobilisation citoyenne.</p>
+      <div class="hero-f__cta">
+        <a href="#" class="btn btn--primary arrow-host">Devenir membre <span class="arrow" aria-hidden="true">→</span></a>
+        <a href="#" class="btn btn--outline-light arrow-host">Découvrir nos actions <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <section class="showcase" data-showcase aria-labelledby="showcase-title">
+    <div class="showcase__sticky">
+      <div class="container showcase__frame">
+        <div class="showcase__card">
+          <img class="showcase__img" src="assets/showcase-forest-1600.webp?v=1789734520" srcset="assets/showcase-forest-900.webp?v=1789734520 900w, assets/showcase-forest-1600.webp?v=1789734520 1600w" sizes="(max-width: 900px) 100vw, 1440px" alt="" loading="lazy" decoding="async">
+          <div class="showcase__content">
+            <div class="showcase__intro">
+              <h2 class="showcase__title" id="showcase-title"><span class="mask"><span>Protéger la nature,</span></span> <span class="mask"><span>le climat et la qualité</span></span> <span class="mask"><span>de vie au Luxembourg</span></span></h2>
+              <div class="showcase__note">
+                <p>Association indépendante, le Mouvement Écologique agit depuis 1968 pour un développement durable au Luxembourg.</p>
+              </div>
+            </div>
+            <nav class="showcase__entries" aria-label="Accès rapides">
+              <a href="#" style="--d:0s" class="entry entry--sand arrow-host"><span class="entry__main"><span class="entry__tile"><img class="entry__icon" src="assets/ph-book-open-text.svg" alt=""></span><span class="entry__text"><span class="entry__label">S'informer</span><span class="entry__action">Découvrir</span></span></span><span class="entry__go"><span class="arrow" aria-hidden="true">→</span></span></a>
+              <a href="#" style="--d:0.08s" class="entry entry--tint arrow-host"><span class="entry__main"><span class="entry__tile"><img class="entry__icon" src="assets/ph-hand-heart.svg" alt=""></span><span class="entry__text"><span class="entry__label">Devenir membre</span><span class="entry__action">Adhérer</span></span></span><span class="entry__go"><span class="arrow" aria-hidden="true">→</span></span></a>
+              <a href="#" style="--d:0.16s" class="entry entry--meco arrow-host"><span class="entry__main"><span class="entry__tile"><img class="entry__icon" src="assets/ph-megaphone.svg" alt=""></span><span class="entry__text"><span class="entry__label">Participer à une action</span><span class="entry__action">Agir</span></span></span><span class="entry__go"><span class="arrow" aria-hidden="true">→</span></span></a>
+              <a href="#agenda" style="--d:0.24s" class="entry entry--green arrow-host"><span class="entry__main"><span class="entry__tile"><img class="entry__icon" src="assets/ph-calendar-dots.svg" alt=""></span><span class="entry__text"><span class="entry__label">Voir l'agenda</span><span class="entry__action">Consulter</span></span></span><span class="entry__go"><span class="arrow" aria-hidden="true">→</span></span></a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <section class="section" data-reveal>
+      <div class="section__head">
+        <h2 class="section__title"><span class="mask"><span>Actualités</span></span></h2>
+        <a href="#" style="--d:.35s" class="reveal-up more arrow-host">Toutes les actualités <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+      <div class="news">
+        <a href="#" style="--d:0.20s" class="reveal-up news-card plus-host news-card--earth">
+          <div class="news-card__img"><img src="assets/news-hesperange.webp?v=1789734520" alt="" loading="lazy"></div>
+          <div class="news-card__body">
+            <p class="news-card__title">Déviation de Hesperange : Meco interpelle la ministre</p>
+            <span class="tag tag--earth">Mobilité</span>
+          </div>
+          <div class="news-card__foot"><span>Lire la suite</span><i class="plus" aria-hidden="true"></i></div>
+        </a>
+        <a href="#" style="--d:0.32s" class="reveal-up news-card plus-host news-card--green">
+          <div class="news-card__img"><img src="assets/news-lucioles.webp?v=1789734520" alt="" loading="lazy"></div>
+          <div class="news-card__body">
+            <p class="news-card__title">Les lucioles, un phénomène à observer fin juin</p>
+            <span class="tag tag--green">Nature</span>
+          </div>
+          <div class="news-card__foot"><span>Lire la suite</span><i class="plus" aria-hidden="true"></i></div>
+        </a>
+        <a href="#" style="--d:0.44s" class="reveal-up news-card plus-host news-card--sand">
+          <div class="news-card__img"><img src="assets/news-google.webp?v=1789734520" alt="" loading="lazy"></div>
+          <div class="news-card__body">
+            <p class="news-card__title">Centre de données Google à Bissen : Meco demande la transparence</p>
+            <span class="tag tag--sand">Climat</span>
+          </div>
+          <div class="news-card__foot"><span>Lire la suite</span><i class="plus" aria-hidden="true"></i></div>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <section class="band">
+    <div class="container">
+      <div class="band__head">
+        <h2 class="band__title" aria-label="Campagnes" data-reveal><span class="band__title-mask" aria-hidden="true"><span style="--i:0">C</span><span style="--i:1">a</span><span style="--i:2">m</span><span style="--i:3">p</span><span style="--i:4">a</span><span style="--i:5">g</span><span style="--i:6">n</span><span style="--i:7">e</span><span style="--i:8">s</span></span></h2>
+      </div>
+      <div class="campaign-stack" data-stack>
+        <article class="stack-card stack-card--sand plus-host" style="--i:0">
+          <div class="stack-card__text">
+            <span class="stack-card__head"><span class="campaign__status">active</span><span class="stack-card__num">(01)</span></span>
+            <h3 class="stack-card__title">Stop Cattenom</h3>
+            <p class="stack-card__desc">La centrale nucléaire de Cattenom représente un risque inacceptable pour le Luxembourg. Nous exigeons sa fermeture immédiate.</p>
+            <a href="#" class="stack-card__foot">Signer la pétition <i class="plus" aria-hidden="true"></i></a>
+          </div>
+          <div class="stack-card__media"><img src="assets/camp-cattenom.webp?v=1789734520" alt="" loading="lazy" width="1000" height="910"></div>
+        </article>
+        <article class="stack-card stack-card--green plus-host" style="--i:1">
+          <div class="stack-card__text">
+            <span class="stack-card__head"><span class="campaign__status">active</span><span class="stack-card__num">(02)</span></span>
+            <h3 class="stack-card__title">Quand la nuit scintille</h3>
+            <p class="stack-card__desc">La pollution lumineuse menace la biodiversité nocturne. Rejoignez notre campagne pour protéger les lucioles et la noirceur du ciel.</p>
+            <a href="#" class="stack-card__foot">Participer <i class="plus plus--light" aria-hidden="true"></i></a>
+          </div>
+          <div class="stack-card__media"><img src="assets/camp-nuit.webp?v=1789734520" alt="" loading="lazy" width="1000" height="910"></div>
+        </article>
+        <article class="stack-card stack-card--earth plus-host" style="--i:2">
+          <div class="stack-card__text">
+            <span class="stack-card__head"><span class="campaign__status">active</span><span class="stack-card__num">(03)</span></span>
+            <h3 class="stack-card__title">Right to Repair</h3>
+            <p class="stack-card__desc">Le droit à la réparation est essentiel pour une économie circulaire. Nous demandons une législation ambitieuse au niveau européen.</p>
+            <a href="#" class="stack-card__foot">En savoir plus <i class="plus plus--light" aria-hidden="true"></i></a>
+          </div>
+          <div class="stack-card__media"><img src="assets/camp-repair.webp" alt="" loading="lazy" width="1000" height="910"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <section class="section" data-reveal>
+      <div class="section__head media-head">
+        <h2 class="section__title"><span class="mask"><span>Médias</span></span></h2>
+        <div class="media-head__actions reveal-up" style="--d:.35s">
+          <a href="#" class="more arrow-host">Toute la médiathèque <span class="arrow" aria-hidden="true">→</span></a>
+          <button class="media-nav" type="button" data-dir="-1" aria-label="Précédent">←</button>
+          <button class="media-nav" type="button" data-dir="1" aria-label="Suivant">→</button>
+        </div>
+      </div>
+
+
+      <!-- Proposal C (default, inspired by zimo-media.com "Our Work"): one tall piece left, one wide + two small on the right -->
+      <div class="media-works">
+        <span class="media-works__vrule" aria-hidden="true"></span>
+        <span class="media-works__hrule" aria-hidden="true"></span>
+        <span class="media-works__vrule media-works__vrule--small" aria-hidden="true"></span>
+        <a href="#" style="--d:0s" class="work work--tall" data-reveal>
+          <span class="work__img"><img src="assets/media-cattenom.webp?v=1789734520" alt="" loading="lazy"><span class="work__chip">Vidéo · 4:12</span><span class="work__play" aria-hidden="true"></span></span>
+          <span class="work__title">Stop Cattenom : pourquoi la centrale reste un risque</span>
+        </a>
+        <a href="#" style="--d:.08s" class="work work--wide" data-reveal>
+          <span class="work__img"><img src="assets/media-nuit.webp?v=1789734520" alt="" loading="lazy"><span class="work__chip">Podcast · 28 min</span><span class="work__play" aria-hidden="true"></span></span>
+          <span class="work__title">Nuits noires : la pollution lumineuse et la biodiversité</span>
+        </a>
+        <a href="#" style="--d:.04s" class="work work--small" data-reveal>
+          <span class="work__img"><img src="assets/media-repair.webp" alt="" loading="lazy"><span class="work__chip">Galerie · 36 photos</span><span class="work__play work__play--gallery" aria-hidden="true"></span></span>
+          <span class="work__title">Repair Café : réparer au lieu de jeter</span>
+        </a>
+        <a href="#" style="--d:.12s" class="work work--small" data-reveal>
+          <span class="work__img"><img src="assets/media-foret.webp?v=1789734520" alt="" loading="lazy"><span class="work__chip">Vidéo · 2:48</span><span class="work__play" aria-hidden="true"></span></span>
+          <span class="work__title">Mousses et lichens : les sentinelles de nos forêts</span>
+        </a>
+      </div>
+      <!-- Proposal B (?medias=b): editorial mosaic, one featured video + five smaller items -->
+      <div class="media-bento">
+          <a href="#" style="--d:0.15s" class="reveal-up media-card media-card--feature">
+            <span class="media-card__img"><img src="assets/camp-cattenom.webp?v=1789734520" alt="" loading="lazy">
+              <span class="media-card__chip">Vidéo</span><span class="media-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="media-card__meta">4:12</span>
+            <span class="media-card__title">Stop Cattenom : pourquoi la centrale reste un risque</span>
+          </a>
+          <a href="#" style="--d:0.22s" class="reveal-up media-card">
+            <span class="media-card__img"><img src="assets/news-lucioles.webp" alt="" loading="lazy">
+              <span class="media-card__chip">Podcast</span><span class="media-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="media-card__meta">28 min</span>
+            <span class="media-card__title">Nuits noires : la pollution lumineuse et la biodiversité</span>
+          </a>
+          <a href="#" style="--d:0.29s" class="reveal-up media-card">
+            <span class="media-card__img"><img src="assets/camp-repair.webp" alt="" loading="lazy">
+              <span class="media-card__chip">Galerie</span>
+            </span>
+            <span class="media-card__meta">36 photos</span>
+            <span class="media-card__title">Repair Café : une journée pour réparer au lieu de jeter</span>
+          </a>
+          <a href="#" style="--d:0.36s" class="reveal-up media-card">
+            <span class="media-card__img"><img src="assets/showcase-forest-900.webp" alt="" loading="lazy">
+              <span class="media-card__chip">Vidéo</span><span class="media-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="media-card__meta">2:48</span>
+            <span class="media-card__title">Mousses et lichens : les sentinelles de nos forêts</span>
+          </a>
+          <a href="#" style="--d:0.43s" class="reveal-up media-card">
+            <span class="media-card__img"><img src="assets/news-hesperange.webp" alt="" loading="lazy">
+              <span class="media-card__chip">Publication</span>
+            </span>
+            <span class="media-card__meta">PDF · 24 p.</span>
+            <span class="media-card__title">Kéisécker Info : mobilité douce, nos propositions</span>
+          </a>
+          <a href="#" style="--d:0.50s" class="reveal-up media-card">
+            <span class="media-card__img"><img src="assets/news-google.webp" alt="" loading="lazy">
+              <span class="media-card__chip">Vidéo</span><span class="media-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="media-card__meta">6:05</span>
+            <span class="media-card__title">Data centers : le vrai coût énergétique</span>
+          </a>
+      </div>
+      <!-- Horizontal media rail: bleeds past the right edge, swipe / drag / arrow buttons, progress bar below -->
+      <div class="media-rail media-rail--wide reveal-up" style="--d:.2s" data-rail>
+        <ul class="media-rail__track">
+          <li><a href="#" class="media-card plus-host">
+            <span class="media-card__img"><img src="assets/camp-cattenom.webp?v=1789734520" alt="" loading="lazy">
+              <span class="media-card__chip">Vidéo</span><span class="media-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="media-card__meta">4:12</span>
+            <span class="media-card__title">Stop Cattenom : pourquoi la centrale reste un risque</span>
+          </a></li>
+          <li><a href="#" class="media-card plus-host">
+            <span class="media-card__img"><img src="assets/news-lucioles.webp" alt="" loading="lazy">
+              <span class="media-card__chip">Podcast</span><span class="media-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="media-card__meta">28 min</span>
+            <span class="media-card__title">Nuits noires : la pollution lumineuse et la biodiversité</span>
+          </a></li>
+          <li><a href="#" class="media-card plus-host">
+            <span class="media-card__img"><img src="assets/camp-repair.webp" alt="" loading="lazy">
+              <span class="media-card__chip">Galerie</span>
+            </span>
+            <span class="media-card__meta">36 photos</span>
+            <span class="media-card__title">Repair Café : une journée pour réparer au lieu de jeter</span>
+          </a></li>
+          <li><a href="#" class="media-card plus-host">
+            <span class="media-card__img"><img src="assets/showcase-forest-900.webp" alt="" loading="lazy">
+              <span class="media-card__chip">Vidéo</span><span class="media-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="media-card__meta">2:48</span>
+            <span class="media-card__title">Mousses et lichens : les sentinelles de nos forêts</span>
+          </a></li>
+          <li><a href="#" class="media-card plus-host">
+            <span class="media-card__img"><img src="assets/news-hesperange.webp" alt="" loading="lazy">
+              <span class="media-card__chip">Publication</span>
+            </span>
+            <span class="media-card__meta">PDF · 24 p.</span>
+            <span class="media-card__title">Kéisécker Info : mobilité douce, nos propositions</span>
+          </a></li>
+          <li><a href="#" class="media-card plus-host">
+            <span class="media-card__img"><img src="assets/news-google.webp" alt="" loading="lazy">
+              <span class="media-card__chip">Vidéo</span><span class="media-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="media-card__meta">6:05</span>
+            <span class="media-card__title">Data centers : le vrai coût énergétique</span>
+          </a></li>
+          <li><a href="#" class="media-card plus-host">
+            <span class="media-card__img"><img src="assets/camp-nuit.webp?v=1789734520" alt="" loading="lazy">
+              <span class="media-card__chip">Podcast</span><span class="media-card__play" aria-hidden="true"></span>
+            </span>
+            <span class="media-card__meta">41 min</span>
+            <span class="media-card__title">Économie circulaire : du discours aux actes</span>
+          </a></li>
+        </ul>
+        <div class="media-rail__progress" aria-hidden="true"><span></span></div>
+      </div>
+    </section>
+
+    <section class="section section--last" id="agenda" data-reveal>
+      <div class="section__head">
+        <h2 class="section__title"><span class="mask"><span>Agenda</span></span></h2>
+        <a href="#" style="--d:.35s" class="reveal-up more arrow-host">Voir tout l'agenda <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+      <!-- Events as a list: date, photo, details, arrow -->
+      <ol class="events">
+        <li><a href="#" style="--d:0.15s" class="reveal-up event arrow-host">
+          <span class="event__date"><span class="event__day">25</span><span class="event__month">Mar</span></span>
+          <span class="event__img"><img src="assets/news-hesperange.webp" alt="" loading="lazy"></span>
+          <span class="event__body"><span class="event__type">Conférence</span><span class="event__title">Quelle agriculture pour demain au Luxembourg ?</span><span class="event__meta">Mer. · 19:00 — Oekozenter Pafendall</span></span>
+          <span class="event__go"><span class="arrow" aria-hidden="true">→</span></span>
+        </a></li>
+        <li><a href="#" style="--d:0.23s" class="reveal-up event arrow-host">
+          <span class="event__date"><span class="event__day">18</span><span class="event__month">Avr</span></span>
+          <span class="event__img"><img src="assets/camp-repair.webp" alt="" loading="lazy"></span>
+          <span class="event__body"><span class="event__type">Atelier</span><span class="event__title">Repair Café : on répare ensemble</span><span class="event__meta">Sam. · 10:00 — Centre culturel, Hesperange</span></span>
+          <span class="event__go"><span class="arrow" aria-hidden="true">→</span></span>
+        </a></li>
+        <li><a href="#" style="--d:0.31s" class="reveal-up event arrow-host">
+          <span class="event__date"><span class="event__day">12</span><span class="event__month">Jun</span></span>
+          <span class="event__img"><img src="assets/camp-cattenom.webp?v=1789734520" alt="" loading="lazy"></span>
+          <span class="event__body"><span class="event__type">Action</span><span class="event__title">Vote crucial : rassemblement devant la Chambre</span><span class="event__meta">Ven. · 18:30 — Luxembourg-Ville</span></span>
+          <span class="event__go"><span class="arrow" aria-hidden="true">→</span></span>
+        </a></li>
+        <li><a href="#" style="--d:0.39s" class="reveal-up event arrow-host">
+          <span class="event__date"><span class="event__day">24</span><span class="event__month">Jun</span></span>
+          <span class="event__img"><img src="assets/news-lucioles.webp" alt="" loading="lazy"></span>
+          <span class="event__body"><span class="event__type">Sortie nature</span><span class="event__title">Nuit des lucioles : balade nocturne</span><span class="event__meta">Mer. · 21:30 — Mullerthal, Berdorf</span></span>
+          <span class="event__go"><span class="arrow" aria-hidden="true">→</span></span>
+        </a></li>
+      </ol>
+    </section>
+  </div>
+
+</main>
+
+<!-- Footer sits under the page and is uncovered as the rounded end of <main> scrolls away (inspired by quin.org.au) -->
+<footer class="footer" data-footer>
+  <img class="footer__photo" src="assets/footer-forest.webp?v=1789734520" alt="" loading="lazy" decoding="async">
+  <div class="container footer__inner">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="#" class="footer__logo" aria-label="Mouvement Écologique — accueil">
+          <span class="footer__emblem" aria-hidden="true"></span>
+          <span class="footer__logotype" aria-hidden="true"><span>mouvement</span><span>écologique</span></span>
+        </a>
+        <p class="footer__lead">Le Mouvement Écologique est l'organisation de protection de la nature au Luxembourg.</p>
+      </div>
+      <div class="footer__cta">
+        <a href="#" class="btn btn--primary arrow-host">Devenir membre <span class="arrow" aria-hidden="true">→</span></a>
+        <a href="#" class="btn btn--outline-light arrow-host">Newsletter <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <p class="footer__wordmark" aria-hidden="true">Mouvement Écologique</p>
+    <div class="footer__bottom">
+      <a href="#">Restaurant Oekosoph</a>
+      <a href="#">Shop</a>
+      <a href="#">FAQ</a>
+      <a href="#">Accès</a>
+      <a href="#">Mentions légales</a>
+      <span>© 2026 Mouvement Écologique a.s.b.l.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/lenis.min.js"></script>
+<script src="main.js?v=1789734520"></script>
+<script src="hero-f.js?v=1789734520"></script>
+<!-- TEMP (maqueta): probar fotos con ?foto=anterior|bosque|campos|pradera|setos|arboles, Médias con ?medias=a|b -->
+<script>(() => { { const m = new URLSearchParams(location.search).get('medias'); if (m === 'a' || m === 'b') document.querySelector('[data-rail]').closest('section').classList.add('medias--' + (m === 'a' ? 'rail' : 'bento')); } const f = new URLSearchParams(location.search).get('foto'); const img = document.querySelector('.showcase__img');
+  if (f && img) { img.removeAttribute('srcset'); img.src = 'assets/alt/showcase-' + f + '.webp'; } })();</script>
+</body>
+</html>
