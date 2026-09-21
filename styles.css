@@ -70,7 +70,13 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .header__bar { display: flex; align-items: center; gap: 8px; height: 92px; }
 .header__logo { flex-shrink: 0; margin-right: 8px; }
 .header__logo img { height: 66px; width: auto; }
-.header__actions { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+.header__actions { display: flex; align-items: center; gap: 8px; }
+/* language switcher: three mono codes, the current one underlined in MECO green; a hairline separates it from the buttons */
+.lang { display: flex; align-items: center; gap: 2px; margin-right: 12px; padding-right: 14px; border-right: 1px solid var(--line-strong); }
+.lang a { position: relative; padding: 8px 7px; font-family: var(--font-label); font-size: 12px; font-weight: 600; letter-spacing: .08em; color: var(--text-muted); transition: color .2s; }
+.lang a:hover { color: var(--text); }
+.lang a[aria-current] { color: var(--forest); }
+.lang a[aria-current]::after { content: ""; position: absolute; left: 7px; right: 7px; bottom: 3px; height: 2px; background: var(--meco); }
 
 .nav { flex: 1; display: flex; align-items: center; justify-content: center; gap: 2px; }
 .nav__btn, .nav__link { display: flex; align-items: center; gap: 4px; height: 40px; padding: 6px 14px; border-radius: var(--radius-sm); font-size: 16px; font-weight: 600; color: var(--text); white-space: nowrap; transition: color .15s, background-color .15s; }
@@ -477,12 +483,15 @@ main { position: relative; z-index: 1; display: flow-root; background: var(--cre
 /* ─── Responsive ─── */
 @media (max-width: 1100px) {
   .nav, .header__actions { display: none; }
+  .lang { margin-left: auto; margin-right: 6px; padding-right: 10px; }
+  .burger { margin-left: 0; }
   .burger { display: flex; }
 }
 @media (max-width: 900px) {
   .hero-f__bottom { flex-direction: column; align-items: stretch; }
   .hero-podcast { width: 100%; margin-bottom: 0; }
   .hero-podcast__cover { width: 120px; min-height: 0; }
+  .hero-podcast__tag { font-size: 10px; letter-spacing: .06em; white-space: nowrap; }
   .medias--rail .media-nav { display: none; }
   .media-head__actions .more { margin-right: 0; }
   .media-rail__track, .media-rail--wide .media-rail__track { grid-auto-columns: min(82vw, 340px); gap: 14px; }
