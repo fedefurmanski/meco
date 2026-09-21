@@ -153,18 +153,20 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .hero-f__bottom { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px 48px; }
 /* Latest podcast teaser: an editorial card in the site's own language (label, title, ruled action bar), no player */
 /* nudged 6px down: the white card reads optically higher than the buttons at the same baseline */
-.hero-podcast { flex: none; margin-bottom: -6px; display: flex; flex-direction: column; width: min(360px, 100%); border-radius: var(--radius); background: var(--white); color: var(--forest); box-shadow: 0 18px 40px -18px rgba(0, 0, 0, .5); overflow: hidden; transition: transform .5s cubic-bezier(.16, 1, .3, 1); animation: hero-f-in 1.1s cubic-bezier(.16, 1, .3, 1) both; animation-delay: calc(.2s + var(--lines, 7) * .09s + .1s); }
+.hero-podcast { flex: none; margin-bottom: -6px; display: flex; width: min(460px, 100%); border-radius: var(--radius); background: var(--white); color: var(--forest); box-shadow: 0 18px 40px -18px rgba(0, 0, 0, .5); overflow: hidden; transition: transform .5s cubic-bezier(.16, 1, .3, 1); animation: hero-f-in 1.1s cubic-bezier(.16, 1, .3, 1) both; animation-delay: calc(.2s + var(--lines, 7) * .09s + .1s); }
 .hero-podcast:hover, .hero-podcast:focus-visible { transform: translateY(-3px); }
 /* the podcast's official cover art as a banner on top */
-.hero-podcast__cover { display: block; aspect-ratio: 720 / 290; overflow: hidden; background: var(--meco); }
+/* square cover, flush with the card edges on the left */
+.hero-podcast__cover { flex: none; align-self: stretch; width: 150px; min-height: 150px; overflow: hidden; background: var(--meco); }
+.hero-podcast__main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
 .hero-podcast__cover img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.16, 1, .3, 1); }
 .hero-podcast:hover .hero-podcast__cover img { transform: scale(1.04); }
-.hero-podcast__body { display: flex; flex-direction: column; gap: 8px; padding: 18px 20px 18px; }
+.hero-podcast__body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 7px; padding: 16px 20px; }
 .hero-podcast__tag { display: flex; align-items: center; gap: 8px; font-family: var(--font-label); font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--meco-deep); }
 .hero-podcast__icon { width: 17px; height: 17px; background: currentColor; -webkit-mask: url(assets/ph-headphones.svg) center / contain no-repeat; mask: url(assets/ph-headphones.svg) center / contain no-repeat; }
-.hero-podcast__title { font-size: 22px; font-weight: 600; line-height: 1.15; letter-spacing: -.01em; }
-.hero-podcast__meta { font-size: 14px; line-height: 1.4; color: var(--text-muted); }
-.hero-podcast__foot { display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-top: 1px solid var(--line-strong); line-height: 46px; font-family: var(--font-label); font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; transition: background-color .3s; }
+.hero-podcast__title { font-size: 21px; font-weight: 600; line-height: 1.15; letter-spacing: -.01em; }
+.hero-podcast__meta { font-size: 13px; line-height: 1.35; color: var(--text-muted); }
+.hero-podcast__foot { display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-top: 1px solid var(--line-strong); line-height: 42px; font-family: var(--font-label); font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; transition: background-color .3s; }
 .hero-podcast__foot .arrow { font-family: var(--font-sans); font-size: 18px; }
 .hero-podcast:hover .hero-podcast__foot, .hero-podcast:focus-visible .hero-podcast__foot { background: var(--meco-tint); }
 
@@ -477,6 +479,7 @@ main { position: relative; z-index: 1; display: flow-root; background: var(--cre
 @media (max-width: 900px) {
   .hero-f__bottom { flex-direction: column; align-items: stretch; }
   .hero-podcast { width: 100%; margin-bottom: 0; }
+  .hero-podcast__cover { width: 120px; min-height: 0; }
   .medias--rail .media-nav { display: none; }
   .media-head__actions .more { margin-right: 0; }
   .media-rail__track, .media-rail--wide .media-rail__track { grid-auto-columns: min(82vw, 340px); gap: 14px; }
