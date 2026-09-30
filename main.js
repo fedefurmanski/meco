@@ -60,20 +60,21 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeAll(null);
 });
 
-// Search panel: toggled from the header, closes on Esc or on the close button
+// Search panel: slides open from the header, closes on Esc or on the close button
 (() => {
   const toggle = document.querySelector('[data-search-toggle]');
   const panel = document.getElementById('site-search');
   if (!toggle || !panel) return;
   const input = panel.querySelector('[data-search-input]');
   const setOpen = open => {
-    panel.hidden = !open;
+    panel.classList.toggle('is-open', open);
+    panel.toggleAttribute('inert', !open);
     toggle.setAttribute('aria-expanded', String(open));
     if (open) input.focus();
   };
-  toggle.addEventListener('click', () => setOpen(panel.hidden));
+  toggle.addEventListener('click', () => setOpen(!panel.classList.contains('is-open')));
   panel.querySelector('[data-search-close]').addEventListener('click', () => { setOpen(false); toggle.focus(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !panel.hidden) { setOpen(false); toggle.focus(); } });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && panel.classList.contains('is-open')) { setOpen(false); toggle.focus(); } });
 })();
 
 // Mobile menu
@@ -228,4 +229,24 @@ burger.addEventListener('click', () => {
     if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
   }), { threshold: .2, rootMargin: '0px 0px -8% 0px' });
   els.forEach(el => io.observe(el));
+})();
+
+// TEMP (maqueta): switch to compare the dark and light hero; the choice is remembered in this browser
+(() => {
+  const group = document.querySelector('.theme-switch');
+  const hero = document.querySelector('.hero-f');
+  if (!group || !hero) return;
+  const param = new URLSearchParams(location.search).get('hero');
+  let current = param || localStorage.getItem('meco-hero') || 'fonce';
+  const apply = value => {
+    current = value;
+    hero.classList.toggle('hero--clair', value === 'clair');
+    group.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.hero === value)));
+    try { localStorage.setItem('meco-hero', value); } catch (e) {}
+  };
+  group.addEventListener('click', e => {
+    const btn = e.target.closest('button');
+    if (btn) apply(btn.dataset.hero);
+  });
+  apply(current);
 })();
