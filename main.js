@@ -60,6 +60,22 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeAll(null);
 });
 
+// Search panel: toggled from the header, closes on Esc or on the close button
+(() => {
+  const toggle = document.querySelector('[data-search-toggle]');
+  const panel = document.getElementById('site-search');
+  if (!toggle || !panel) return;
+  const input = panel.querySelector('[data-search-input]');
+  const setOpen = open => {
+    panel.hidden = !open;
+    toggle.setAttribute('aria-expanded', String(open));
+    if (open) input.focus();
+  };
+  toggle.addEventListener('click', () => setOpen(panel.hidden));
+  panel.querySelector('[data-search-close]').addEventListener('click', () => { setOpen(false); toggle.focus(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !panel.hidden) { setOpen(false); toggle.focus(); } });
+})();
+
 // Mobile menu
 const burger = document.querySelector('.burger');
 const mobileMenu = document.getElementById('mobile-menu');
@@ -128,8 +144,8 @@ burger.addEventListener('click', () => {
     ticking = false;
     const top = section.getBoundingClientRect().top;
     const pinned = section.offsetHeight - (innerHeight - 92); // px the sticky frame stays pinned
-    const start = innerHeight * .55;                        // begins opening as it comes up the page
-    const end = 92 - pinned * .5;                           // fully open halfway through the pinned stretch
+    const start = innerHeight * .75;                        // begins opening as soon as it comes up the page
+    const end = 92 - pinned * .35;                          // fully open early in the pinned stretch
     const t = Math.min(1, Math.max(0, (start - top) / (start - end)));
     const p = t * t * (3 - 2 * t);
     section.style.setProperty('--p', p.toFixed(4));
