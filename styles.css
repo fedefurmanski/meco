@@ -83,7 +83,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .search-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s cubic-bezier(.16, 1, .3, 1); }
 .search-panel > * { overflow: hidden; }
 .search-panel.is-open { grid-template-rows: 1fr; }
-.search-panel__row { background: var(--cream); border-top: 2px solid var(--meco); }
+.search-panel__row { position: relative; background: var(--cream); }
+/* the green rule is absolutely positioned, so it adds no height when the row is collapsed */
+.search-panel__row::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: var(--meco); }
 .search-panel__inner { opacity: 0; transform: translateY(-8px); transition: opacity .3s ease, transform .5s cubic-bezier(.16, 1, .3, 1); }
 .search-panel.is-open .search-panel__inner { opacity: 1; transform: none; }
 .search-panel__inner { display: flex; align-items: center; gap: 12px; padding-block: 14px; }
