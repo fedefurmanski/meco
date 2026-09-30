@@ -83,7 +83,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .search-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s cubic-bezier(.16, 1, .3, 1); }
 .search-panel > * { overflow: hidden; }
 .search-panel.is-open { grid-template-rows: 1fr; }
-.search-panel__row { position: relative; background: var(--cream); }
+.search-panel__row { position: relative; background: var(--white); box-shadow: 0 1px 0 var(--line); }
 /* the green rule is absolutely positioned, so it adds no height when the row is collapsed */
 .search-panel__row::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: var(--meco); }
 .search-panel__inner { opacity: 0; transform: translateY(-8px); transition: opacity .3s ease, transform .5s cubic-bezier(.16, 1, .3, 1); }
@@ -128,7 +128,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 /* green rule that separates the open panel from the header, drawn from the centre outwards */
 .dd__panel::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: var(--meco); transform: scaleX(0); transition: transform .55s cubic-bezier(.16, 1, .3, 1); }
 .dd.is-open .dd__panel::before { transform: none; }
-.dd__box { --dd-bg: var(--cream); --dd-fg: var(--forest); --dd-muted: var(--forest); --dd-rule: var(--line-strong); --dd-accent: var(--meco-deep);
+.dd__box { --dd-bg: var(--white); --dd-fg: var(--forest); --dd-muted: var(--forest); --dd-rule: var(--line-strong); --dd-accent: var(--meco-deep);
   display: grid; grid-template-columns: minmax(220px, 1fr) 2.6fr; gap: clamp(32px, 5vw, 80px); padding: clamp(28px, 3vw, 44px); border-radius: var(--radius); background: var(--dd-bg); color: var(--dd-fg); box-shadow: 0 26px 50px -20px rgba(27, 36, 25, .35); }
 .dd__aside { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; padding-right: clamp(20px, 2.5vw, 40px); border-right: 1px solid var(--dd-rule); }
 .dd__lead { font-size: 17px; font-weight: 500; line-height: 1.45; color: var(--text-muted); }
